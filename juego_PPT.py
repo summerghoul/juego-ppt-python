@@ -8,6 +8,11 @@ print("¡Bienvenidos al juego de piedra papel o tijera!")
 nombre_1 = input("ingresar el nombre del jugador 1: ")
 nombre_2 = input("ingresar el nombre del jugador 2: ")
 
+txt = " ,que eliges? piedra, papel o tijera: "
+
+tirada_jugador_1 = nombre_1 + txt
+tirada_jugador_2 = nombre_2 + txt
+
 while not fin_del_juego:
 
     if not cant_partidas < partidas_max:
@@ -16,9 +21,9 @@ while not fin_del_juego:
 
 
     # primera partida
-    jugador_1 = input(nombre_1, "que eliges? piedra, papel o tijera: ").lower()
+    jugador_1 = input(tirada_jugador_1).lower()
     # segunda partida
-    jugador_2 = input(nombre_2, "que eliges? piedra, papel o tijera: ").lower()
+    jugador_2 = input(tirada_jugador_2).lower()
 
 
     situacion_1 = jugador_1 == "piedra" and jugador_2 == "tijera"
@@ -34,4 +39,3 @@ while not fin_del_juego:
 
     cant_partidas += 1
     
-
